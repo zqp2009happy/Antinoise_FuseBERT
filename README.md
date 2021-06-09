@@ -13,15 +13,24 @@ pip3 install sacrebleu==1.1.7
 
 ./test_set/QA10000.a: 根据QA10000.q，人工标注回复。
 
-./test_set/Hard1000: 从日志分析的无效语句中，随机抽取1000条。这个测试集没有人工标注回复语句，主要测试模型对无效语句的处理能力。评测指标为distinct-1、distinct-2 、平均回复句长，以及人工评测。
+./test_set/Hard1000: 从日志分析的噪声语句中，随机抽取1000条。
+
+./test_set/Hard1000.a1: 人工标注回复1 
+
+./test_set/Hard1000.a2: 人工标注回复2 
+
+## 噪声分布
+```
+python3 ./scripts/analysis_noise_distribute.py 
+```
 
 ## 自动评测
 ```
 sh eval.sh
 ```
 
-## 人工评测
+## 噪声测试集人工纠正以及模型结果汇总
   
-./test_result/Hard1000.labels.xlsx : 3位标注人员人工评测多个模型回复 
+./test_result/Hard1000.labels.xlsx 
 
 
