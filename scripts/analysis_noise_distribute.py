@@ -72,7 +72,7 @@ class DPMinEditDistance():
             temp = 'rep'
         return min_c, temp
 
-data = xlrd.open_workbook('test_result/脱敏日志_噪声标注_uniq_人工转写.xlsx')
+data = xlrd.open_workbook('test_result/hard1000_人工转写.xlsx')
 table = data.sheets()[0]
 nrows = table.nrows
 ncols = table.ncols
